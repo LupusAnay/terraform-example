@@ -1,6 +1,7 @@
-import boto3
-import botocore
+def handler(event, context):
+    return {
+        "statusCode": 200,
+        "headers": {'Content-Type': 'text/html'},   #it really works by Hector Duran!
+        "body": "<h1>Hello World</h1>"
+    }
 
-def lambda_handler(event, context):
-   print(f'boto3 version: {boto3.__version__}')
-   print(f'botocore version: {botocore.__version__}')
